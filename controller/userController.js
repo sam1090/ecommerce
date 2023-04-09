@@ -3,6 +3,8 @@ const User = require('../models/userModel');
 const asyncHandler = require('express-async-handler')
 const {validateMoongooseId} = require('../utils/validateMongodbId')
 const {generateRefreshToken} = require('../config/refreshToken');
+const jwt = require('jsonwebtoken');
+
 
 exports.createUser = asyncHandler(async(req,res)=>{
   const email = req.body.email;
@@ -48,6 +50,24 @@ exports.loginUserCtrl = asyncHandler(async(req,res)=>{
     throw new Error("Invalid credentials")
   }
 
+})
+
+//Handle refresh token 
+exports.handleRefreshToken = asyncHandler(async (req,res)=>{
+  const cookie = req.cookies;
+  if(!cookie?.refreshToken) throw new Error("No Refresh Token in Cookie");
+  const refreshToken = cookie.refreshToken;
+  const user = await User.findOne({refreshToken});
+  if(!user) throw new Error(" NO Refresh Token present in db or not matched")
+  jwt.verify(refreshToken, process.env.JWT_SECRET, (err, decoded)=>{
+    if(err || user.id !== decoded.id){
+      throw new Error('there is something wrong with refresh token')
+    }
+    const accessToken =generateToken(user?._id);
+    res.json({
+      accessToken
+    })
+  })
 })
 
 // to get all users 
@@ -152,3 +172,25 @@ exports.unblockUser=asyncHandler(async(req,res)=>{
  }
  }
  );
+
+ exports.logout = asyncHandler(async(req,res)=>{
+  const cookie = req.cookies;
+  if(!cookie?.refreshToken)throw new Error("No Refresh Token in Cookie");
+  const refreshToken = cookie.refreshToken;
+  const user = await User.findOne({refreshToken});
+  if(!user){
+    res.clearCookie("refreshToken",{
+      httpOnly:true,
+      secure:true,
+    });
+    return res.sendStatus(204);
+  }
+  await User.findOneAndUpdate(refreshToken,{
+    refreshToken:"",
+  });
+  res.clearCookie("refreshToken",{
+    httpOnly:true,
+    secure:true
+  })
+  return res.sendStatus(204);
+ })
