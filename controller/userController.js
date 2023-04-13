@@ -75,6 +75,7 @@ exports.getallUsers = asyncHandler(async(req,res)=>{
   try{
     const getUsers = await User.find();
     res.status(200).json({
+      size:getUsers.length,
       getUsers
     })
   }catch(error){
