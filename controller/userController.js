@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const { findById } = require('../models/productModel');
 const {sendEmail} = require('./emailController');
 const crypto = require('crypto');
+const userModel = require('../models/userModel');
 
 
 exports.createUser = asyncHandler(async(req,res)=>{

@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { ObjectId } = require('mongodb');
-const crypto = require('crypto')
+const crypto = require('crypto');
+
 
 // Declare the Schema of the Mongo model
 var userSchema = new mongoose.Schema({
