@@ -5,10 +5,11 @@ exports.notFound = (req,res,next)=>{
 
 }
 
-exports.errorHandler = (err, req, res, next) =>{
-  const statuscode = res.statusCode == 200? 500: res.status(statusCode);
-  res.json({
+exports.errorHandler = (err, req, res, next) => {
+  const statusCode = (res.statusCode !== 200) ? 500 : res.statusCode;
+  res.status(res.statusCode).json({
     message: err?.message,
     stack: err?.stack,
   });
-};   
+};
+
