@@ -2,9 +2,9 @@ const Product = require('../models/productModel');
 const User = require('../models/userModel');
 const asyncHandler = require('express-async-handler');
 const {validateMoongooseId} = require('../utils/validateMongodbId');
-// const cloudinary = require('../utils/cloudinary')
 const slugify = require('slugify');
 const { cloudinaryUploadImg } = require('../utils/cloudinary');
+const fs= require('fs');
 
 exports.createProduct = asyncHandler(async(req,res)=>{
   try {
@@ -219,6 +219,7 @@ exports.uploadImages = asyncHandler(async(req,res)=>{
       const {path} = file;
       const newpath = await uploader(path);
       urls.push(newpath); 
+      fs.unlinkSync(path);
     }
     const findProduct = await Product.findByIdAndUpdate(
       id,
