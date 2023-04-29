@@ -5,15 +5,18 @@ const authMiddleware= require('../middlewares/authMiddleware')
 
 router.post('/register',userController.createUser);
 router.post('/login',userController.loginUserCtrl);
+router.post('/admin-login',userController.loginAdmin );
 router.get('/all-users',userController.getallUsers);
 router.get('/refresh',userController.handleRefreshToken);
 router.get('/logout',userController.logout);
 router.put('/password',authMiddleware.authMiddleware,userController.updatePassword);
 router.get('/forgot-password',userController.forgotPassword);
 router.put('/reset-password/:token',userController.resetPassword);
+router.get('/wishlist',authMiddleware.authMiddleware, userController.getWishlist);
 router.get('/:id',authMiddleware.authMiddleware,authMiddleware.isAdmin,userController.getaUser);
 router.delete('/:id',userController.deleteaUser);
 router.put('/edit-user',authMiddleware.authMiddleware,userController.updateaUser);
+router.put('/address',authMiddleware.authMiddleware,userController.saveAddress);
 router.put('/block-user/:id',authMiddleware.authMiddleware,authMiddleware.isAdmin,userController.blockUser);
 router.put('/unblock-user/:id',authMiddleware.authMiddleware,authMiddleware.isAdmin,userController.unblockUser);
 

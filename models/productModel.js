@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'); // Erase if already required
-const User = require('../models/userModel')
+const User = require('./userModel');
 // Declare the Schema of the Mongo model
 var productSchema = new mongoose.Schema({
     title:{
@@ -57,7 +57,11 @@ var productSchema = new mongoose.Schema({
     totalRatings :{
       type: Number,
       default: 0 ,
-    }
+    },
+    wishlist:{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:'User'
+    },
 
 },{
   timestamps:true

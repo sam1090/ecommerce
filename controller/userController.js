@@ -4,7 +4,7 @@ const asyncHandler = require('express-async-handler')
 const {validateMoongooseId} = require('../utils/validateMongodbId')
 const {generateRefreshToken} = require('../config/refreshToken');
 const jwt = require('jsonwebtoken');
-const { findById } = require('../models/productModel');
+const Product = require('../models/productModel');
 const {sendEmail} = require('./emailController');
 const crypto = require('crypto');
 const userModel = require('../models/userModel');
@@ -55,6 +55,43 @@ exports.loginUserCtrl = asyncHandler(async(req,res)=>{
   }
 
 })
+
+//Login an Admin
+
+exports.loginAdmin = asyncHandler(async(req,res)=>{
+  const email = req.body.email;
+  const password = req.body.password;
+  //check if user exists or not 
+  const findAdmin = await User.findOne({email});
+  if(findAdmin.role !=='admin') throw new Error("Not Authorized");
+  if(findAdmin && await findAdmin.isPasswordMatched(password)){
+    const refreshToken = await generateRefreshToken(findAdmin?._id);
+    const updateUser = await User.findByIdAndUpdate(findAdmin.id,{
+      refreshToken,
+    },{
+      new:true
+    })
+
+    res.cookie("refreshToken",refreshToken,{
+      httpOnly:true,
+      maxAge:72 * 60  *60 * 1000,
+    })
+
+
+    res.status(200).json({
+      id:findAdmin?._id,
+      firstname: findAdmin?.firstname,
+      lastname: findAdmin?.lastname,
+      email: findAdmin?.email,
+      mobile: findAdmin?.mobile,
+      token: generateToken(findAdmin?._id)
+    });
+  }else{
+    throw new Error("Invalid credentials")
+  }
+
+});
+
 
 //Handle refresh token 
 exports.handleRefreshToken = asyncHandler(async (req,res)=>{
@@ -116,10 +153,10 @@ exports.deleteaUser = asyncHandler(async(req,res)=>{
 
 // Update a user
 exports.updateaUser = asyncHandler(async(req,res)=>{
+  const {id} = req.user;
+  validateMoongooseId(id);
+  
   try {
-    const {id} = req.user;
-    validateMoongooseId(id);
-
     const updatedUser = await User.findByIdAndUpdate(id,{
       firstname:req?.body?.firstname,
       lastname:req?.body?.lastname,
@@ -277,3 +314,32 @@ exports.resetPassword = asyncHandler(async(req,res)=>{
 });
 
  
+exports.getWishlist = asyncHandler(async(req,res)=>{
+  const {_id} = req.user;
+  try {
+    const findUser = await User.findById(_id).populate("wishlist");
+    res.json(findUser);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+exports.saveAddress = asyncHandler(async(req,res)=>{
+  const {id} = req.user;
+  validateMoongooseId(id);
+  
+  try {
+    const updatedUser = await User.findByIdAndUpdate(id,{
+      address:req?.body?.address,
+    },{
+      new:true
+    });
+
+    res.status(200).json({
+      updatedUser
+    })
+
+  } catch (error) {
+    throw new Error(error)
+  } 
+})

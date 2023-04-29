@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { ObjectId } = require('mongodb');
 const crypto = require('crypto');
-
+const Product = require('./productModel')
 
 // Declare the Schema of the Mongo model
 var userSchema = new mongoose.Schema({
@@ -36,8 +36,12 @@ var userSchema = new mongoose.Schema({
         type:Array,
         default:[]
     },
-    address:[{type:ObjectId, ref:"Address"}],
-    wishlist:[{type: ObjectId,ref: "Products"}],
+    address:[{
+       type:String,
+    }],
+    wishlist:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Product"}],
     
     isBlocked:{
         type:Boolean,
