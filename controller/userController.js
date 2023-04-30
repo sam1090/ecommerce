@@ -496,3 +496,26 @@ exports.getAllOrders = asyncHandler(async(req, res)=>{
   }
 });
 
+exports.updateOrderStatus = asyncHandler(async(req,res)=>{
+  const {status} = req.body;
+  const { id } = req.params;
+  validateMoongooseId(id);
+
+  try {
+    const updateOrderStatus = await Order.findByIdAndUpdate(
+      id,
+      {
+        orderStatus: status,
+        paymentIntent:{
+          status
+        },
+      },
+      {
+        new:true
+      }
+    );
+    res.json(updateOrderStatus);
+  } catch (error) {
+    throw new Error(error);
+  }
+})
