@@ -13,6 +13,10 @@ router.put('/password',authMiddleware.authMiddleware,userController.updatePasswo
 router.get('/forgot-password',userController.forgotPassword);
 router.put('/reset-password/:token',userController.resetPassword);
 router.get('/wishlist',authMiddleware.authMiddleware, userController.getWishlist);
+router.post('/cart',authMiddleware.authMiddleware, userController.userCart);
+router.get('/cart',authMiddleware.authMiddleware, userController.getUserCart);
+router.delete('/cart',authMiddleware.authMiddleware, userController.emptyCart);
+router.post('/cart/applyCoupon',authMiddleware.authMiddleware, userController.applyCoupon);
 router.get('/:id',authMiddleware.authMiddleware,authMiddleware.isAdmin,userController.getaUser);
 router.delete('/:id',userController.deleteaUser);
 router.put('/edit-user',authMiddleware.authMiddleware,userController.updateaUser);
