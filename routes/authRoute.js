@@ -17,6 +17,8 @@ router.post('/cart',authMiddleware.authMiddleware, userController.userCart);
 router.get('/cart',authMiddleware.authMiddleware, userController.getUserCart);
 router.delete('/cart',authMiddleware.authMiddleware, userController.emptyCart);
 router.post('/cart/applyCoupon',authMiddleware.authMiddleware, userController.applyCoupon);
+router.post('/cart /cash-order',authMiddleware.authMiddleware, userController.createOrder);
+router.get('/cart/get-orders',authMiddleware.authMiddleware, userController.getAllOrders);
 router.get('/:id',authMiddleware.authMiddleware,authMiddleware.isAdmin,userController.getaUser);
 router.delete('/:id',userController.deleteaUser);
 router.put('/edit-user',authMiddleware.authMiddleware,userController.updateaUser);
