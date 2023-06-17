@@ -50,15 +50,15 @@ const Header = () => {
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white">
                     <img src="images/compare.svg" alt="Compare" />
-                    <p>
+                    <p className="mb-0">
                       Compare <br/> Products
-                    </p>
+                    </p> 
                   </Link>
                 </div>
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white">
                   <img src="images/wishlist.svg" alt="Compare" />
-                    <p>
+                    <p className="mb-0">
                       Fovourite <br/> Wishlist
                     </p>
                   </Link>
@@ -66,7 +66,7 @@ const Header = () => {
                 <div>
                 <Link className="d-flex align-items-center gap-10 text-white">
                 <img src="images/user.svg" alt="User" />
-                    <p>
+                    <p className="mb-0">
                       My <br/> Account
                     </p>
                     </Link>
@@ -84,6 +84,30 @@ const Header = () => {
             </div>
           </div>
         </div>
+      </header>
+      <header className="header-bottom py-3" >
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="menu-bottom d-flex align-items-center">
+                <div>
+
+                </div>
+                <div className="menu-links">
+                  <div className="d-flex align-items-center gap-15">
+                    <NavLink className="text-white"  to="/">Homex</NavLink>
+                    <NavLink className="text-white" to="/">Our Store</NavLink>
+                    <NavLink className="text-white" to="/">Blogs</NavLink>
+                    <NavLink className="text-white" to="/contact">Contact</NavLink>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </header>
     </>
   );
