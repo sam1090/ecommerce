@@ -51,63 +51,97 @@ const Header = () => {
                   <Link className="d-flex align-items-center gap-10 text-white">
                     <img src="images/compare.svg" alt="Compare" />
                     <p className="mb-0">
-                      Compare <br/> Products
-                    </p> 
+                      Compare <br /> Products
+                    </p>
                   </Link>
                 </div>
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white">
-                  <img src="images/wishlist.svg" alt="Compare" />
+                    <img src="images/wishlist.svg" alt="Compare" />
                     <p className="mb-0">
-                      Fovourite <br/> Wishlist
+                      Fovourite <br /> Wishlist
                     </p>
                   </Link>
                 </div>
                 <div>
-                <Link className="d-flex align-items-center gap-10 text-white">
-                <img src="images/user.svg" alt="User" />
+                  <Link className="d-flex align-items-center gap-10 text-white">
+                    <img src="images/user.svg" alt="User" />
                     <p className="mb-0">
-                      My <br/> Account
+                      My <br /> Account
                     </p>
-                    </Link>
+                  </Link>
                 </div>
                 <div>
-                <Link className="d-flex align-items-center gap-10 text-white">
-                <img src="images/cart.svg" alt="My Cart" />
+                  <Link className="d-flex align-items-center gap-10 text-white">
+                    <img src="images/cart.svg" alt="My Cart" />
                     <div className="d-flex flex-column">
                       <span className="badge bg-white text-dark">0</span>
                       <p className="mb-0">$500</p>
                     </div>
-                    </Link>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <header className="header-bottom py-3" >
+      <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="menu-bottom d-flex align-items-center">
+              <div className="menu-bottom d-flex align-items-center gap-30">
                 <div>
-
+                  <div className="dropdown">
+                    <button
+                      className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img src="images/menu.svg" alt="" />
+                      <span className="me-5 d-inline-bl ock">
+                        Shop Categories
+                      </span>
+                    </button>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Action
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Something else here
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div className="menu-links">
                   <div className="d-flex align-items-center gap-15">
-                    <NavLink className="text-white"  to="/">Homex</NavLink>
-                    <NavLink className="text-white" to="/">Our Store</NavLink>
-                    <NavLink className="text-white" to="/">Blogs</NavLink>
-                    <NavLink className="text-white" to="/contact">Contact</NavLink>
+                    <NavLink className="text-white" to="/">
+                      Home
+                    </NavLink>
+                    <NavLink className="text-white" to="/">
+                      Our Store
+                    </NavLink>
+                    <NavLink className="text-white" to="/">
+                      Blogs
+                    </NavLink>
+                    <NavLink className="text-white" to="/contact">
+                      Contact
+                    </NavLink>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </div>
         </div>
-
       </header>
     </>
   );
