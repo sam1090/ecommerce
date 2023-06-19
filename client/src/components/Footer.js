@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsLinkedin, BsInstagram, BsYoutube, BsGithub } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -43,16 +44,31 @@ const Footer = () => {
                 </address>
                 <a
                   href="tel : +917684307576"
-                  className="mt-4 text-white mb-2 d-block"
+                  className="mt-3 text-white mb-1 d-block"
                 >
                   +917684307576
                 </a>
                 <a
                   href="mailto:usam12@gmail.com"
-                  className="mt-4 text-white mb-2 d-block"
+                  className="mt-2 text-white mb-0 d-block"
                 >
                   usam12@gmail.com
                 </a>
+                <div className="social-icons d-flex align-items-center gap-30 mt-4">
+                  <a href="" className="text-white">
+                    <BsLinkedin className="fs-4" />
+                  </a>
+                  <a href="" className="text-white">
+                    <BsInstagram className="fs-4" />
+                  </a>
+                  <a href="" className="text-white">
+                    <BsGithub className="fs-4" />
+                  </a>
+                  <a href="" className="text-white">
+                    <BsYoutube className="fs-4" />
+                  </a>
+                  <a href=""></a>
+                </div>
               </div>
             </div>
             <div className="col-3">
