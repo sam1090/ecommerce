@@ -10,6 +10,7 @@
   --color-febd69: #febd69;
   --color-232f3e: #232f3e;
   --color-bf4800: #bf4800;
+  --color-f5f5f7: #f5f5f7;
 }
 
 body {
@@ -46,7 +47,7 @@ a {
   font-size: 14px;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--color-febd69);
   color: #131921;
 }
@@ -153,7 +154,6 @@ footer .input-group-text {
   color: var(--color-131921);
 }
 
-
 .small-banner-content {
   top: 25%;
   left: 10%;
@@ -184,8 +184,15 @@ footer .input-group-text {
   color: var(--color-131921);
 }
 
-.small-banner{
+.small-banner {
   width: 49%;
 }
+
+/* Home wrapper 2 */
+.home-wrapper-2{
+  background-color: var(--color-f5f5f7);
+}
+
+/* home wrapper 2 ends here */
 
 /* Home Page ends here  */
