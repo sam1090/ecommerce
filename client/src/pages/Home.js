@@ -134,6 +134,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="home-wrapper-3 py-5">
+        
+      </section>
     </>
   );
 };
