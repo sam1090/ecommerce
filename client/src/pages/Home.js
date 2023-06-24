@@ -136,7 +136,18 @@ const Home = () => {
       </section>
 
       <section className="home-wrapper-3 py-5">
-        
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="categories d-flex justify-content-between align-items-center">
+                <div className="d-flex gap-30">
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
