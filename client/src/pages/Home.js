@@ -213,7 +213,7 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
             <ProductCard />
-          </div>
+          </div> 
         </div>
       </section>
 
