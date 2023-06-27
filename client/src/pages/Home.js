@@ -204,82 +204,99 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        <section className="featured-wrapper  py-5 home-wrapper-2">
-          <div className="container-xxl">
-            <div className="row">
-              <div className="section-heading">Featured Collection</div>
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+      <section className="featured-wrapper  py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="section-heading">Featured Collection</div>
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </section>
+
+      <section className="special-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading ">Special Products</h3>
             </div>
           </div>
-        </section>
+          <div className="row">
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
+          </div>
+        </div>
+      </section>
 
-        <section className="special-wrapper py-5 ">
-          <div className="container-xxl">
-            <div className="row">
-              <div className="col-12">
-                <h3 className="section-heading ">Special Products</h3>
+      <section className="popular-wrapper  py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+            <div className="section-heading">Our Popular Products</div>
+            </div>
+          </div>
+        
+        <div className="row">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        </div>
+        </div>
+      </section>
+
+      <section className="marque-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="marquee-inner-wrapper card-wrapper">
+                <Marquee className="d-flex ">
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-01.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-02.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-03.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-04.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-05.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-06.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-07.png" alt="brand" />
+                  </div>
+                  <div className="mx-4 w-25">
+                    <img src="images/brand-08.png" alt="brand" />
+                  </div>
+                </Marquee>
               </div>
             </div>
-            <div className="row">
-              <SpecialProduct />
-              <SpecialProduct />
-              <SpecialProduct />
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="marque-wrapper py-5">
-          <div className="container-xxl">
-            <div className="row">
-              <div className="col-12">
-                <div className="marquee-inner-wrapper card-wrapper">
-                  <Marquee className="d-flex ">
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-01.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-02.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-03.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-04.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-05.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-06.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-07.png" alt="brand" />
-                    </div>
-                    <div className="mx-4 w-25">
-                      <img src="images/brand-08.png" alt="brand" />
-                    </div>
-                  </Marquee>
-                </div>
-              </div>
-            </div>
+      <section className="blog-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="section-heading">Our Latest Blogs</div>
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
           </div>
-        </section>
-
-        <section className="blog-wrapper py-5 home-wrapper-2">
-          <div className="container-xxl">
-            <div className="row">
-              <div className="section-heading">Our Latest Blogs</div>
-              <BlogCard />
-              <BlogCard />
-              <BlogCard />
-              <BlogCard />
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
     </>
   );
