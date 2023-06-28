@@ -360,3 +360,33 @@ footer .input-group-text {
 }
 
 /* Special Product Card ends here */
+
+/* famous card */
+.famous-card .famous-content{
+  top: 20%;
+  left: 10%;
+}
+
+.famous-content h5{
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400px;
+  color: white;
+  margin-bottom: 7px;
+}
+
+.famous-content h6{
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 500;
+  color: white;
+}
+
+.famous-content P{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+  color: white;
+}
+
+/* famous card ends here */
