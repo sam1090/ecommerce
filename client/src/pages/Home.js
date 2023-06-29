@@ -224,7 +224,7 @@ const Home = () => {
             <div className="col-3">
               <div className="famous-card position-relative">
                 <img src="images/bluetooth.png" alt="famous" className="img-fluid bg-dark "/>
-                <div></div>
+                
                 <div className="famous-content position-absolute">
                 <h5>Big Screen</h5>
                 <h6>JBL BLUETOOTH </h6>
