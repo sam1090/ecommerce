@@ -362,32 +362,36 @@ footer .input-group-text {
 /* Special Product Card ends here */
 
 /* famous card */
-.famous-card .famous-content{
-  top: 20%;
-  left: 10%;
+.famous-card .famous-content {
+  top: 8%;
+  left: 5%;
 }
-.famous-card img{
-  border-radius: 10px;
-  height: 600px;
-  width: 800px;
+.famous-card img {
+  /* transform: translate(0px,20px); */
+  border-radius: 20px;
+  height: 450px;
+  width: 495px;
+  
+  object-fit: contain;
 }
 
-.famous-content h5{
+.famous-content h5 {
   font-size: 13px;
   line-height: 20px;
   font-weight: 400px;
   color: white;
   margin-bottom: 7px;
+  text-transform: uppercase;
 }
 
-.famous-content h6{
+.famous-content h6 {
   font-size: 28px;
   line-height: 38px;
   font-weight: 500;
   color: white;
 }
 
-.famous-content p{
+.famous-content p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 100;
