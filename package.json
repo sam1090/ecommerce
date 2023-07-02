@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-fast-marquee": "^1.6.0"
+    "react-fast-marquee": "^1.6.0",
+    "react-helmet": "^6.1.0"
   }
 }
