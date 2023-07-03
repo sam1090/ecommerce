@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 :root {
@@ -372,7 +371,7 @@ footer .input-group-text {
   border-radius: 20px;
   height: 450px;
   width: 495px;
-  
+
   object-fit: contain;
 }
 
@@ -401,24 +400,23 @@ footer .input-group-text {
 
 /* famous card ends here */
 
-
 /* Our Store */
-.filter-card{
+.filter-card {
   background-color: white;
   border-radius: 10px;
-  padding: 10px 15px 25px;
+  padding: 15px 15px 25px;
 }
 
-.filter-title{
+.filter-title {
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
   color: var(--color-1c1c1b);
   margin-bottom: 20px;
-
 }
 
-.filter-card ul, .filter-card .form-check-label{
+.filter-card ul,
+.filter-card .form-check-label {
   list-style-type: none;
   font-size: 13px;
   line-height: 30px;
@@ -426,33 +424,41 @@ footer .input-group-text {
   cursor: pointer;
 }
 
-.form-check-input:checked{
+.form-check-input:checked {
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.25);
 }
 
-.filter-card .form-check-input:checked{
+.filter-card .form-check-input:checked {
   background-color: var(--color-febd69);
-  border-color:var(--color-febd69);
+  border-color: var(--color-febd69);
 }
-.sub-title{
+.sub-title {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-1c1c1b);
   margin-bottom: 15px;
   margin-top: 20px;
 }
-.colors{
+.colors {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
 }
-.colors li{
+.colors li {
   width: 20px;
   height: 20px;
   background-color: red;
   border-radius: 50%;
+}
+
+.random-products h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.random-products:first-child{
+  border-bottom: 1px solid var(--color-ededed);
 }
 /* Our Store ends here */
