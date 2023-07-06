@@ -6,7 +6,7 @@ function BlogCard() {
     <div className="col-3">
       <div className="blog-card">
         <div className="card-image">
-          <img src="images/blog-1.jpg" alt="blog" className="img-fluid" />
+          <img src="images/blog-1.jpg" alt="blog" className="img-fluid w-100" />
         </div>
         <div className="blog-content">
           <p className="date">09 mar, 2023</p>
