@@ -7,19 +7,20 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import OurStore from "./pages/OurStore";
 import Blog from "./pages/Blog";
+import CompareProd from "./pages/CompareProd";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout/>} >
-            <Route index element={<Home/>} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact/>} />
-            <Route path="store" element={<OurStore/>} />
-            <Route path="blogs" element={<Blog/>} />
-            
-            </Route>
+            <Route path="contact" element={<Contact />} />
+            <Route path="store" element={<OurStore />} />
+            <Route path="blogs" element={<Blog />} />
+            <Route path="compare-product" element={<CompareProd />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
