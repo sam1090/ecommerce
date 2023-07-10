@@ -576,7 +576,29 @@ footer .input-group-text {
 .compare-product-card .cross{
   top: 15px;
   right: 15px;
-  width: 20px;
+  width: 25px;
+  padding: 3px;
   cursor: pointer;
+}
+
+.compare-product-details h5.title{
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--color-131921);
+}
+
+.compare-product-details h6.price{
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.compare-product-card .product-detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 /* Compare Product Page ends here */
