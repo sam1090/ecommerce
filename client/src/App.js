@@ -26,7 +26,7 @@ function App() {
             <Route path="compare-product" element={<CompareProd />} />
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="login" element={<Login/>} />
-            <Route path="sign-up" element={<SignUp/>} />
+            <Route path="signup" element={<SignUp/>} />
             <Route path="forgot-password" element={<Forgotpassword/>} />
           </Route>
         </Routes>
