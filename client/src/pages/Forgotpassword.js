@@ -12,7 +12,9 @@ const Forgotpassword = () => {
           <div className="col-12">
             <div className="auth-card">
               <h3 className="text-center mb-3">Reset Password</h3>
-              <p className="text-center mt-3 mb-3">We will send you an email to reset password</p>
+              <p className="text-center mt-3 mb-3">
+                We will send you an email to reset password
+              </p>
               <form action="" className="d-flex flex-column gap-30">
                 <div>
                   <input
@@ -22,12 +24,12 @@ const Forgotpassword = () => {
                     className="form-control"
                   />
                 </div>
-                
+
                 <div>
-                  <Link to="/forgot-password">Forgot Password</Link>
-                  <div className="d-flex align-items-center gap-15 justify-content-center">
-                    <button className="button border-0">Submit</button>
-                    <Link to ='/login' >Cancel</Link>
+                  
+                  <div className="mt-3 d-flex justify-content-center flex-column gap-15 align-items-center">
+                    <button className="button border-0" type="submit">Submit</button>
+                    <Link to="/login">Cancel</Link>
                   </div>
                 </div>
               </form>
