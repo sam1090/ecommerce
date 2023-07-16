@@ -680,3 +680,13 @@ color: var(--color-1c1c1b);
   color: white;
 }
 /* auth card ends here */
+
+
+/* Policy Pages */
+
+.policy{
+  background-color: white;
+  padding: 30px;
+}
+
+/* Policy Pages end here */
