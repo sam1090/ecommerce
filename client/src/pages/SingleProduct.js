@@ -3,8 +3,16 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 import ReactStars from "react-rating-stars-component";
+import ReactImageZoom from "react-image-zoom";
 
 const SingleProduct = () => {
+  const props = {
+    width: 482,
+    height: 500,
+    zoomWidth: 600,
+    img: "https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
+  };
+
   const [orderedProduct, setorderedProduct] = useState(true);
   return (
     <>
@@ -13,15 +21,53 @@ const SingleProduct = () => {
       <div className="main-product-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
-            <div className="col-6"></div>
-            <div className="col-6"></div>
+            <div className="col-6">
+              <div className="main-product-image">
+                <div>
+                  <ReactImageZoom {...props} />
+                </div>
+              </div>
+              <div className="other-product-images d-flex flex-wrap gap-15">
+                <div><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=250&q=60" className="img-fluid" alt="" /></div>
+                <div><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=250&q=60" className="img-fluid" alt="" /></div>
+                <div><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=250&q=60" className="img-fluid" alt="" /></div>
+                <div><img src="https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=250&q=60" className="img-fluid" alt="" /></div>
+
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="main-product-details">
+                  <div className="border-bottom">
+                    <h3 className="title">
+                      Luxury Watches For Men
+                    </h3>
+                  </div>
+
+                  <div className="border-bottom py-3">
+                    <p className="price">
+                      $500
+                    </p>
+                    <div className="d-flex align-items-center gap-10">
+                    <ReactStars
+                            count={5}
+                            size={24}
+                            value={3}
+                            edit={false}
+                            activeColor="#ffd700"
+                          />
+                          <p className="mb-0">{"(100K reviews)"}</p>
+                    </div>
+                          <a href="#review">Write a Review</a>
+                  </div>
+              </div>
+            </div>
           </div>
 
           <section className="description-wrapper py-5 home-wrapper-2">
             <div className="container-xxl">
               <div className="row">
                 <div className="col-12">
-                    <h4>Description</h4>
+                  <h4>Description</h4>
                   <div className="bg-white p-3">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,11 +82,11 @@ const SingleProduct = () => {
             </div>
           </section>
 
-          <div className="reviews-wrapper home-wrapper-2">
+          <div   className="reviews-wrapper home-wrapper-2">
             <div className="container-xxl">
               <div className="row">
                 <div className="col-12">
-                  <h3>Reviews</h3>
+                  <h3 id="review">Reviews</h3>
                   <div className="review-inner-wrapper">
                     <div className="review-head d-flex justify-content-between align-items-end">
                       <div>
@@ -96,18 +142,23 @@ const SingleProduct = () => {
                     </div>
                     <div className="reviews">
                       <div className="review">
-
-                     <div className="d-flex align-items-center gap-10">
-                      <h6 className="mb-0">Saumya</h6>
-                      <ReactStars
+                        <div className="d-flex align-items-center gap-10">
+                          <h6 className="mb-0">Saumya</h6>
+                          <ReactStars
                             count={5}
                             size={24}
                             value={3}
                             edit={false}
                             activeColor="#ffd700"
                           />
-                     </div>
-                          <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam excepturi temporibus ratione. Nihil officiis eius architecto quasi repellendus dolor vel quaerat sunt, ex vitae totam corrupti tempora voluptatem eveniet?</p>
+                        </div>
+                        <p className="mt-3">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Inventore aliquam excepturi temporibus ratione.
+                          Nihil officiis eius architecto quasi repellendus dolor
+                          vel quaerat sunt, ex vitae totam corrupti tempora
+                          voluptatem eveniet?
+                        </p>
                       </div>
                     </div>
                   </div>
