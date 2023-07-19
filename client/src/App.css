@@ -670,11 +670,12 @@ footer .input-group-text {
   color: var(--color-1c1c1b);
 }
 
-.auth-card .signup {
+.signup {
   background-color: var(--color-febd69);
   color: var(--color-131921);
+  border: none;
 }
-.auth-card .signup:hover {
+.signup:hover {
   background-color: var(--color-131921);
   color: white;
 }
@@ -690,6 +691,12 @@ footer .input-group-text {
 /* Policy Pages end here */
 
 /* Main Product Page */
+
+a{
+  color: var(--color-777777);
+  font-size: 13px;
+}
+
 
 .description-wrapper h4,
 .reviews-wrapper h3 {
@@ -794,8 +801,29 @@ footer .input-group-text {
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
-  margin-top: 10px;
   margin-bottom: 10px;
 
 }
+
+.main-product-details a.review-btn, t-review{
+  color: var(--color-777777);
+  font-size: 13px;
+}
+
+.product-heading{
+  font-size: 14px;
+  color: var(--color-1c1c1b);
+  margin-bottom: 0px;
+}
+
+.product-data{
+  font-size: 13px;
+  color: var(--color-777777);
+  margin-bottom: 0px;
+}
+
+.main-product-details {
+  font-size: 14px;
+  color: var(--color-777777);
+}  
 /* Main Product Pafe ended */
