@@ -6,8 +6,8 @@ import ReactStars from "react-rating-stars-component";
 import ReactImageZoom from "react-image-zoom";
 import Color from "../components/Color";
 import { Link } from "react-router-dom";
-import{BiGitCompare} from "react-icons/bi";
-import{AiOutlineHeart} from "react-icons/ai";
+import { BiGitCompare } from "react-icons/bi";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const SingleProduct = () => {
   const props = {
@@ -15,6 +15,16 @@ const SingleProduct = () => {
     height: 500,
     zoomWidth: 600,
     img: "https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
+  };
+
+  const copyToClipboard = (text) => {
+    console.log("text", text);
+    var textField = document.createElement("textarea");
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
   };
 
   const [orderedProduct, setorderedProduct] = useState(true);
@@ -129,7 +139,6 @@ const SingleProduct = () => {
                   <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3  ">
                     <h3 className="product-heading">Quantity: </h3>
                     <div className="">
-
                       <input
                         type="number"
                         name=""
@@ -141,27 +150,44 @@ const SingleProduct = () => {
                       />
                     </div>
                     <div className="d-flex align-items-center gap-30 ms-5">
-                    <button className="button border-0">Add to Cart</button>
-                    <button className="button signup">
-                      Buy Now
-                    </button>
+                      <button className="button border-0">Add to Cart</button>
+                      <button className="button signup">Buy Now</button>
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-15">
                     <div>
-                      <a href=""> 
-                      <BiGitCompare className="fs-5 me-2"/>  
-                      Add to Compare</a>
+                      <a href="">
+                        <BiGitCompare className="fs-5 me-2" />
+                        Add to Compare
+                      </a>
                     </div>
                     <div>
-                      <a href=""> 
-                      <AiOutlineHeart className="fs-5 me-2"/>
-                      Add to Wishlist</a>
+                      <a href="">
+                        <AiOutlineHeart className="fs-5 me-2" />
+                        Add to Wishlist
+                      </a>
                     </div>
                   </div>
+                  <div className="d-flex flex-column gap-10  my-3">
+                    <h3 className="product-heading">Shipping and Returns :</h3>
+                    <p className="product-data">
+                      Free Shipping and returns available on all orders! <br />
+                      We ship all US domestic orders within
+                      <b>5-10 business days</b>
+                    </p>
+                  </div>
                   <div className="d-flex gap-10 align-items-center my-2">
-                    <h3 className="product-heading">Type:</h3>
-                    <p className="product-data">Watch</p>
+                    <h3 className="product-heading">Product Link :</h3>
+                    <a
+                      href="javascript:void(0)"
+                      onClick={() => {
+                        copyToClipboard(
+                          "https://images.unsplash.com/photo-1619134778706-7015533a6150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0Y2hlcyUyMGZvciUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+                        );
+                      }}
+
+                    > Click Here!
+                     </a>
                   </div>
                 </div>
               </div>
