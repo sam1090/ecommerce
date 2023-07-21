@@ -830,7 +830,7 @@ a{
 
 
 /* Cart Page  */
-.cart-header {
+.cart-header, .card-data {
 border-bottom: 1px solid #eaeaea;
 
 }
@@ -844,6 +844,11 @@ border-bottom: 1px solid #eaeaea;
 .cart-col-1{
   width: 40%;
 }
+
+.cart-col-1 p{
+  color: var(--color-777777);
+  font-size: 14px;
+}
 .cart-col-2{
   width: 10%;
 }
@@ -852,6 +857,11 @@ border-bottom: 1px solid #eaeaea;
 }
 .cart-col-4{
   width: 15%;
+}
+
+.cart-data h5.price{
+  font-size: 14px;
+  color: var(--color-1c1c1b);
 }
 
 
