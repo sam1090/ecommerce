@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import OurStore from "./pages/OurStore";
 import Blog from "./pages/Blog";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import CompareProd from "./pages/CompareProd";
 import Wishlist from "./pages/Wishlist";
 import Login from "./pages/Login";
@@ -19,7 +21,6 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import TermsnCondition from "./pages/TermsnCondition";
 import SingleProduct from "./pages/SingleProduct";
-import Cart from "./pages/Cart";
 function App() {
   return (
     <>
@@ -34,6 +35,7 @@ function App() {
             <Route path="blogs" element={<Blog />} />
             <Route path="blog/:id" element={<SingleBlog />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="compare-product" element={<CompareProd />} />
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="login" element={<Login/>} />

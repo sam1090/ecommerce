@@ -16,7 +16,7 @@ const Header = () => {
               <p className="text-end text-white mb-0">
                 Hotline:{" "}
                 <a className="text-white" href="tel: =91 8264896547">
-                  +91 8264896547
+                  +91 8264896547  
                 </a>
               </p>
             </div>
