@@ -21,9 +21,9 @@ const ProductCard = (props) => {
       >
         <Link to=':id' className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
-            <Link>
+            <button className="border-0 bg-transparent">
               <img src={wish} alt="Wishlist" />
-            </Link>
+            </button>
           </div>
           <div className="product-image">
             <img

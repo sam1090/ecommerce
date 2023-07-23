@@ -18,24 +18,25 @@ const Checkout = () => {
                 >
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <Link className="text-dark" to="/cart">
+                      <Link className="text- total-price" to="/cart">
                         Cart
                       </Link>
                     </li>
                     &nbsp; /
-                    <li className="breadcrumb-item active" aria-current="page">
+                    <li className="breadcrumb-item active total-price" aria-current="page">
                       Information
                     </li>
                     &nbsp; /
-                    <li className="breadcrumb-item active ">Shipping</li>
+                    <li className="breadcrumb-item active  total-price">Shipping</li>
                     &nbsp; /
-                    <li className="breadcrumb-item active" aria-current="page">
+                    <li className="breadcrumb-item active total-price" aria-current="page">
                       Payment
                     </li>
                   </ol>
                 </nav>
-                <h4 className="title">Contact Information</h4>
+                <h4 className="title total">Contact Information</h4>
                 <p className="user-details">Saumya (usam21@gmail.com)</p>
+                <h4 className="mb-3">Shipping Address</h4>
                 <form
                   action=""
                   className="d-flex gap-15 justify-content-between flex-wrap"
