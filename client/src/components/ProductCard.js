@@ -9,7 +9,6 @@ import watch2 from "../images/watch-1.jpg";
 import addcart from "../images/add-cart.svg";
 import view from "../images/view.svg";
 
-
 const ProductCard = (props) => {
   const { grid } = props;
   let location = useLocation();
@@ -17,9 +16,20 @@ const ProductCard = (props) => {
   return (
     <>
       <div
-        className={`${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
-        <Link to=':id' className="product-card position-relative">
+        <Link
+          to={`${
+            location.pathname == "/"
+              ? "/product/:id "
+              : location.pathname == "/product/:id"
+              ? "/product/:id"
+              : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="Wishlist" />
@@ -27,12 +37,12 @@ const ProductCard = (props) => {
           </div>
           <div className="product-image">
             <img
-              src="images/watch.jpg"
+              src={watch}
               alt="product image"
               className="img-fluid"
             />
             <img
-              src="images/watch-1.jpg"
+              src={watch2}
               alt="product image"
               className="img-fluid"
             />
@@ -49,9 +59,11 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
-
-            <p className={`description ${grid === 12 ? "d-block" :" d-none"}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis similique dolorum, sit consequatur error! Tempora porro commodi similique dolorem libero? A in quam temporibus numquam praesentium labore exercitationem facere?
+            <p className={`description ${grid === 12 ? "d-block" : " d-none"}`}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              veritatis similique dolorum, sit consequatur error! Tempora porro
+              commodi similique dolorem libero? A in quam temporibus numquam
+              praesentium labore exercitationem facere?
             </p>
             ,<p className="price"> $100.00</p>
           </div>
@@ -71,25 +83,28 @@ const ProductCard = (props) => {
         </Link>
       </div>
       <div
-        className={`${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
-        <Link to=':id' className="product-card position-relative">
+         <Link
+          to={`${
+            location.pathname == "/"
+              ? "/product/:id "
+              : location.pathname == "/product/:id"
+              ? "/product/:id"
+              : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           <div className="wishlist-icon position-absolute">
             <Link>
               <img src={wish} alt="Wishlist" />
             </Link>
           </div>
           <div className="product-image">
-            <img
-              src="images/watch.jpg"
-              alt="product image"
-              className="img-fluid"
-            />
-            <img
-              src="images/watch-1.jpg"
-              alt="product image"
-              className="img-fluid"
-            />
+            <img src={watch} alt="product image" className="img-fluid" />
+            <img src={watch2} alt="product image" className="img-fluid" />
           </div>
           <div className="product-details">
             <h6 className="brand">Havels</h6>
@@ -103,9 +118,11 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
-
-            <p className={`description ${grid === 12 ? "d-block" :" d-none"}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis similique dolorum, sit consequatur error! Tempora porro commodi similique dolorem libero? A in quam temporibus numquam praesentium labore exercitationem facere?
+            <p className={`description ${grid === 12 ? "d-block" : " d-none"}`}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              veritatis similique dolorum, sit consequatur error! Tempora porro
+              commodi similique dolorem libero? A in quam temporibus numquam
+              praesentium labore exercitationem facere?
             </p>
             ,<p className="price"> $100.00</p>
           </div>
