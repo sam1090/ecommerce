@@ -8,6 +8,7 @@ import Color from "../components/Color";
 import { Link } from "react-router-dom";
 import { BiGitCompare } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
+import Container from "../components/Container";
 
 const SingleProduct = () => {
   const props = {
@@ -32,8 +33,7 @@ const SingleProduct = () => {
     <>
       <Meta title={"Product Name"} />
       <BreadCrumb title="Product Name" />
-      <div className="main-product-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      <Container class1="main-product-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-6">
               <div className="main-product-image">
@@ -311,8 +311,7 @@ const SingleProduct = () => {
               </div>
             </div>
           </section>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };

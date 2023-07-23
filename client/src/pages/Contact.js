@@ -5,14 +5,14 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BiPhoneCall } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
+import Container from "../components/Container";
 
 const Contact = () => {
   return (
     <>
       <Meta title={"Contact Us"} />
       <BreadCrumb title="Contact Us" />
-      <div className="contact-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      <Container class1="contact-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-12">
               <iframe
@@ -94,8 +94,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };
