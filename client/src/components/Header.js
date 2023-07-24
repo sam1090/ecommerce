@@ -118,23 +118,23 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <img src={Menu} alt="" />
-                      <span className="me-5 d-inline-bl ock">
+                      <span className="me-5 d-inline-block">
                         Shop Categories
                       </span>
                     </button>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="text-white dropdown-item" href="#">
                           Action
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className=" text-white dropdown-item" href="#">
                           Another action
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="text-white dropdown-item" href="#">
                           Something else here
                         </a>
                       </li>
