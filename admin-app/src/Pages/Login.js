@@ -15,7 +15,7 @@ const Login = () => {
        <form action="">
        <CustomInput type="text" label="Email Address" id="email" />
         <CustomInput type="password" label="Password" id="pass" />
-        <Link to='/admin' className='text-center text-decoration-none border-0 px-3 py-2 text-white fw-bold w-100' style={{background : "#ffd333"}} type='submit'>Log in / Sign in</Link>
+        <Link to='/admin' className='text-center text-decoration-none border-0 px-3 py-2 text-white fw-bold w-100' style={{background : "#ffd333"}} type='submit'>Login</Link>
        </form>
       </div>
       
