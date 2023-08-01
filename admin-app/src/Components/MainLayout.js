@@ -7,6 +7,7 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
+import { AiOutlineDashboard } from "react-icons/ai";
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -24,8 +25,13 @@ const MainLayout = () => {
           items={[
             {
               key: "1",
-              icon: <UserOutlined />,
-              label: "nav 1",
+              icon: <AiOutlineDashboard />,
+              label: "Dashboard",
+            },
+            {
+              key: "1",
+              icon: <AiOutlineDashboard />,
+              label: "Dashboard",
             },
             {
               key: "2",
