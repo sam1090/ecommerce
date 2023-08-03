@@ -7,9 +7,16 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
-import { AiOutlineDashboard, AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
-import {SiBrandfolder} from 'react-icons/si';
-import {BiCategoryAlt} from 'react-icons/bi';
+import {
+  AiOutlineDashboard,
+  AiOutlineShoppingCart,
+  AiOutlineUser,
+  AiOutlineBgColors,
+} from "react-icons/ai";
+import { SiBrandfolder } from "react-icons/si";
+import { BiCategoryAlt } from "react-icons/bi";
+import { ImBlog } from "react-icons/im";
+import { FaClipboardList, FaBloggerB } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
@@ -35,48 +42,90 @@ const MainLayout = () => {
           items={[
             {
               key: "",
-              icon: <AiOutlineDashboard className="fs-4"/>,
+              icon: <AiOutlineDashboard className="fs-4" />,
               label: "Dashboard",
             },
             {
               key: "customers",
-              icon: <AiOutlineUser className="fs-4"/>,
+              icon: <AiOutlineUser className="fs-4" />,
               label: "Customers",
             },
             {
-              key: "Catalog",
-              icon: <AiOutlineShoppingCart className="fs-4"/>,
+              key: "catalog",
+              icon: <AiOutlineShoppingCart className="fs-4" />,
               label: "Catalog",
               children: [
                 {
                   key: "product",
-                  icon: <AiOutlineShoppingCart className="fs-4"/>,
+                  icon: <AiOutlineShoppingCart className="fs-4" />,
                   label: "Add Product",
                 },
                 {
                   key: "product-list",
-                  icon: <AiOutlineShoppingCart className="fs-4"/>,
+                  icon: <AiOutlineShoppingCart className="fs-4" />,
                   label: "Product List",
                 },
                 {
                   key: "brand",
-                  icon: <SiBrandfolder className="fs-5"/>,
+                  icon: <SiBrandfolder className="fs-5" />,
                   label: "Brand ",
                 },
                 {
                   key: "brand-list",
-                  icon: <SiBrandfolder className="fs-5"/>,
+                  icon: <SiBrandfolder className="fs-5" />,
                   label: "Brand List",
                 },
                 {
                   key: "category",
-                  icon: <BiCategoryAlt className="fs-5"/>,
+                  icon: <BiCategoryAlt className="fs-5" />,
                   label: "Category ",
                 },
                 {
                   key: "category-list",
-                  icon: <BiCategoryAlt className="fs-5"/>,
+                  icon: <BiCategoryAlt className="fs-5" />,
                   label: "Category List",
+                },
+                {
+                  key: "color",
+                  icon: <AiOutlineBgColors className="fs-5" />,
+                  label: "Color ",
+                },
+                {
+                  key: "color-list",
+                  icon: <AiOutlineBgColors className="fs-5" />,
+                  label: "Color List",
+                },
+              ],
+            },
+            {
+              key: "orders",
+              icon: <FaClipboardList className="fs-4" />,
+              label: "Orders",
+            },
+            {
+              key: "blog",
+              icon: <FaBloggerB className="fs-4" />,
+              label: "Blogs",
+              children: [
+                {
+                  key: "blog",
+                  icon: <ImBlog className="fs-4" />,
+                  label: "Add Blog",
+                },
+                {
+                  key: "blog-list",
+                  icon: <FaBloggerB className="fs-4" />,
+                  label: "Blog List",
+                },
+                {
+                  key: "blog-category",
+                  icon: <ImBlog className="fs-4" />,
+                  label: "Add Blog Category",
+                },
+                {
+                  key: "blog-category-list",
+                  icon: <FaBloggerB className="fs-4" />,
+                  label: "Blog Category List",
                 },
               ],
             },
