@@ -24,3 +24,23 @@ body {
 .ant-layout{
   min-height: 100vh;
 }
+
+ .ant-layout-sider {
+  flex: 0 0 250px !important;
+  max-width: 250px !important;
+  min-width: 250px !important;
+  width: 250px !important;
+ }
+
+ .ant-layout-sider-collapsed {
+  flex: 0 0 80px !important;
+  max-width: 80px !important;
+  min-width: 80px !important;
+  width: 80px !important;
+ }
+
+ .logo {
+  background-color: #ffd333;
+  margin: 0;
+  height: 64px ;
+ }

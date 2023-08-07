@@ -28,7 +28,9 @@ const MainLayout = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical " />
+        <div className="logo " >
+          <h2>Dev Corner</h2>
+          </div>
         <Menu
           theme="dark"
           mode="inline"
@@ -112,15 +114,31 @@ const MainLayout = () => {
                   icon: <ImBlog className="fs-4" />,
                   label: "Add Blog",
                 },
+
+                {
+                  key: "blog-list",
+                  icon: <FaBloggerB className="fs-4" />,
+                  label: "Blog List",
+                },
                
                 {
                   key: "blog-category",
                   icon: <ImBlog className="fs-4" />,
                   label: "Add Blog Category",
-                }
+                },
+                {
+                  key: "blog-category-list",
+                  icon: <FaBloggerB className="fs-4" />,
+                  label: "Blog Category List",
+                },
                 
               ],
             },
+            {
+              key: "Enquiry",
+              icon: <FaClipboardList className="fs-4" />,
+              label: "Enquiries",
+            }
           ]}
         />
       </Sider>
