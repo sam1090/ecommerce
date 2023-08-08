@@ -29,9 +29,11 @@ const MainLayout = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo " >
-          <h2>Dev Corner</h2>
+          <h2 className="text-white fs-5 text-center py-3 mb-0">
+            <span className="sm-logo">DC</span>
+            <span className="lg-logo">Dev Corner</span></h2>
           </div>
-        <Menu
+        <Menu 
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["1"]}
