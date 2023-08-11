@@ -14,7 +14,7 @@ import {
   AiOutlineBgColors,
   AiOulinePicRight,
 } from "react-icons/ai";
-import {IoIoNotifications} from 'react-icons/io'; 
+import {IoIosNotifications} from 'react-icons/io'; 
 import { SiBrandfolder } from "react-icons/si";
 import { BiCategoryAlt } from "react-icons/bi";
 import { ImBlog } from "react-icons/im";
@@ -164,8 +164,8 @@ const MainLayout = () => {
               height: 64,
             }}
           />
-          <div className="d-flex gap-3 align-items-center">
-            <div className="postition-relative"><IoIoNotifications />
+          <div className="d-flex gap-4 v  align-items-center">
+            <div className="position-relative"><IoIosNotifications className="fs-3"/>
             <span className="badge bg-warning rounded-circle p-1 position-absolute"> 3
               </span></div>
             <div className="d-flex gap-3 align-items-center">
