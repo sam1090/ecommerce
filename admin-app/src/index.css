@@ -59,6 +59,7 @@ body {
 
  main{
   overflow-y: scroll ;
+  background-color: transparent !important;
  }
 
  .ant-menu-title-content {
