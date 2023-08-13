@@ -6,6 +6,7 @@ import ForgotPassword from './Pages/ForgotPassword';
 import MainLayout from './Components/MainLayout';
 import Dashboard from './Pages/Dashboard';
 import Enquiries from './Pages/Enquiries';
+import BlogList from './Pages/BlogList';
 function App() {
   return (
     <Router>
@@ -16,6 +17,8 @@ function App() {
         <Route path='/admin' element={<MainLayout/>} >
           <Route index element= {<Dashboard />} />
           <Route path='enquiry' element = {<Enquiries/>} />
+          <Route path='blog-list' element = {<BlogList/>} />
+
         </Route>
 
       </Routes>
