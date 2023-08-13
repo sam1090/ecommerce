@@ -18,6 +18,7 @@ import AddBlog from './Pages/AddBlog';
 import AddBlogCat from './Pages/AddBlogCat';
 import AddColor from './Pages/AddColor';
 import AddCat from './Pages/AddCat';
+import AddBrand from './Pages/AddBrand';
 function App() {
   return (
     <Router>
@@ -38,6 +39,7 @@ function App() {
           <Route path='color' element = {<AddColor/>} />
           <Route path='category-list' element = {<CategoryList/>} />
           <Route path='category' element = {<AddCat/>} />
+          <Route path='brand' element = {<AddBrand/>} />
           <Route path='brand-list' element = {<BrandList/>} />
           <Route path='product-list' element = {<ProductList/>} />
 
