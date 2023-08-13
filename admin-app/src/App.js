@@ -13,6 +13,7 @@ import Customers from './Customers';
 import ColorList from './ColorList';
 import CategoryList from './CategoryList';
 import BrandList from './BrandList';
+import ProductList from './ProductList';
 function App() {
   return (
     <Router>
@@ -30,6 +31,7 @@ function App() {
           <Route path='color-list' element = {<ColorList/>} />
           <Route path='category-list' element = {<CategoryList/>} />
           <Route path='brand-list' element = {<BrandList/>} />
+          <Route path='product-list' element = {<ProductList/>} />
 
         </Route>
 
