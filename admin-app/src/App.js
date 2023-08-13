@@ -8,6 +8,8 @@ import Dashboard from './Pages/Dashboard';
 import Enquiries from './Pages/Enquiries';
 import BlogList from './Pages/BlogList';
 import BlogCatList from './Pages/BlogCatList';
+import Orders from './Pages/Orders';
+import Customers from './Customers';
 function App() {
   return (
     <Router>
@@ -20,6 +22,8 @@ function App() {
           <Route path='enquiry' element = {<Enquiries/>} />
           <Route path='blog-list' element = {<BlogList/>} />
           <Route path='blog-category-list' element = {<BlogCatList/>} />
+          <Route path='orders' element = {<Orders/>} />
+          <Route path='customers' element = {<Customers/>} />
 
         </Route>
 
