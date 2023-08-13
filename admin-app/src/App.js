@@ -3,17 +3,17 @@ import {BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import Login from './Pages/Login';
 import ResetPassword from './Pages/ResetPassword';
 import ForgotPassword from './Pages/ForgotPassword';
-import MainLayout from './Components/MainLayout';
+import MainLayout from './Pages/MainLayout';
 import Dashboard from './Pages/Dashboard';
 import Enquiries from './Pages/Enquiries';
 import BlogList from './Pages/BlogList';
 import BlogCatList from './Pages/BlogCatList';
 import Orders from './Pages/Orders';
-import Customers from './Customers';
-import ColorList from './ColorList';
-import CategoryList from './CategoryList';
-import BrandList from './BrandList';
-import ProductList from './ProductList';
+import Customers from './Pages/Customers';
+import ColorList from './Pages/ColorList';
+import CategoryList from './Pages/CategoryList';
+import BrandList from './Pages/BrandList';
+import ProductList from './Pages/ProductList';
 function App() {
   return (
     <Router>
