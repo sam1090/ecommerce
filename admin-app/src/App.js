@@ -7,6 +7,7 @@ import MainLayout from './Components/MainLayout';
 import Dashboard from './Pages/Dashboard';
 import Enquiries from './Pages/Enquiries';
 import BlogList from './Pages/BlogList';
+import BlogCatList from './Pages/BlogCatList';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
           <Route index element= {<Dashboard />} />
           <Route path='enquiry' element = {<Enquiries/>} />
           <Route path='blog-list' element = {<BlogList/>} />
+          <Route path='blog-category-list' element = {<BlogCatList/>} />
 
         </Route>
 
