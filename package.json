@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@ant-design/charts": "^1.4.2",
-    "react-fast-marquee": "^1.6.0",
-    "react-helmet": "^6.1.0"
-  }
-}

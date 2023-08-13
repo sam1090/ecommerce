@@ -14,6 +14,7 @@ import ColorList from './Pages/ColorList';
 import CategoryList from './Pages/CategoryList';
 import BrandList from './Pages/BrandList';
 import ProductList from './Pages/ProductList';
+import AddBlog from './Pages/AddBlog';
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/admin' element={<MainLayout/>} >
           <Route index element= {<Dashboard />} />
           <Route path='enquiry' element = {<Enquiries/>} />
+          <Route path='blog' element = {<AddBlog/>} />
           <Route path='blog-list' element = {<BlogList/>} />
           <Route path='blog-category-list' element = {<BlogCatList/>} />
           <Route path='orders' element = {<Orders/>} />
