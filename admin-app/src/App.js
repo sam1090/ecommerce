@@ -19,6 +19,7 @@ import AddBlogCat from './Pages/AddBlogCat';
 import AddColor from './Pages/AddColor';
 import AddCat from './Pages/AddCat';
 import AddBrand from './Pages/AddBrand';
+import AddProduct from './Pages/AddProduct';
 function App() {
   return (
     <Router>
@@ -41,6 +42,7 @@ function App() {
           <Route path='category' element = {<AddCat/>} />
           <Route path='brand' element = {<AddBrand/>} />
           <Route path='brand-list' element = {<BrandList/>} />
+          <Route path='product' element = {<AddProduct/>} />
           <Route path='product-list' element = {<ProductList/>} />
 
         </Route>
