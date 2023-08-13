@@ -2,65 +2,98 @@ import React from "react";
 
 import { BsArrowDownRight, BsArrowUpRight } from "react-icons/bs";
 import { Column } from "@ant-design/plots";
+import { Table } from 'antd';
 
-let config;
 
-const DemoColumn = () => {
-  const data = [
-    {
-      type: "sbv",
-      sales: 43,
-    },
-    {
-      type: "sbv",
-      sales: 43,
-    },
-    {
-      type: "sbv",
-      sales: 43,
-    },
-    {
-      type: "sbv",
-      sales: 43,
-    },
-    {
-      type: "sbv",
-      sales: 43,
-    },
-    {
-      type: "sbv",
-      sales: 43,
-    },
-  ];
-   config = {
-    data,
-    xField: "type",
-    yField: "sales",
-    label: {
-      position: "middle",
-      style: {
-        fill: "#FFFFFF",
-        opacity: 0.6,
-      },
-    },
-    xAxis: {
-      label: {
-        autoHide: true,
-        autoRotate: false,
-      },
-    },
-    meta: {
-      type: {
-        alias: 'XYZ',
-      },
-      sales: {
-        alias: 'hello',
-      },
-    },
-  };
+const columns = [
+  {
+    title : "Sno",
+    dataIndex :"key",
+  },
+  {
+    title: "Name",
+    dataIndex: "name"
+  }, 
+  {
+    title: "Product",
+    dataIndex: "product"
+  }, 
+  {
+    title: "Status",
+    dataIndex: "status"
+  }, 
+];
 
-  // Rest of your component logic...
-};
+const data1 = [];
+
+for(let i = 0 ; i< 46 ; i++){
+  data1.push({
+    key: i , 
+    name: `Edward King ${i}`,
+    product: 32,
+    status: `London, Park Lane no. ${i}`,
+  });
+}
+
+
+// let config;
+
+// const DemoColumn = () => {
+//   const data = [
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//     {
+//       type: "sbv",
+//       sales: 43,
+//     },
+//   ];
+//    config = {
+//     data,
+//     xField: "type",
+//     yField: "sales",
+//     label: {
+//       position: "middle",
+//       style: {
+//         fill: "#FFFFFF",
+//         opacity: 0.6,
+//       },
+//     },
+//     xAxis: {
+//       label: {
+//         autoHide: true,
+//         autoRotate: false,
+//       },
+//     },
+//     meta: {
+//       type: {
+//         alias: 'XYZ',
+//       },
+//       sales: {
+//         alias: 'hello',
+//       },
+//     },
+//   };
+
+//   // Rest of your component logic...
+// };
 
 
 const Dashboard = () => {
@@ -113,8 +146,18 @@ const Dashboard = () => {
           Income Statics
         </h3>
         <div>
-          <Column {...config} />
+          {/* <Column {...config} /> */}
         </div>
+      </div>
+      <div className="mt-4">
+
+        <h3 className="mb-4">
+
+          Recent Orders
+        </h3>
+        <div>
+          <Table columns ={columns} dataSource = {data1} />
+         </div>
       </div>
     </div>
   );
