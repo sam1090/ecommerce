@@ -34,7 +34,7 @@ for(let i = 0 ; i< 46 ; i++){
 const Customers = () => {
   return (
     <div>
-    <h3 className="mb-4">
+    <h3 className="mb-4 title">
       Customers
     </h3>
     <div>

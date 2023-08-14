@@ -34,7 +34,7 @@ for(let i = 0 ; i< 46 ; i++){
 const BlogCatList = () => {
   return (
     <div>
-    <h3 className="mb-4">
+    <h3 className="mb-4 title">
       Blog Category
     </h3>
     <div>
