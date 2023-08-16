@@ -44,7 +44,9 @@ export const authSlice = createSlice({
       state.isLoading = false;
       state.isError = true ;
       state.isSuccess = true ;
-      state.user = <action classname = 'pa'></action>
+      state.user = null;
     });
   },
 });
+
+export default authSlice.reducer;
