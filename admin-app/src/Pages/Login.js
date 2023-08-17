@@ -2,13 +2,25 @@ import React from "react";
 import CustomInput from "../Components/CustomInput";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
+import * as yup from 'yup';
+
 
 const Login = () => {
+  let schema = yup.objefct().shape({
+    email: yup.string().email.required(),
+    password: yup.string().required(),
+    
+
+  });
+
   const formik = useFormik({
+    
     initialValues: {
       email: "",
       password: "",
-    },
+    }, validationSchema: 'f' ,
+
+    
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -25,7 +37,7 @@ const Login = () => {
         <form action="" onSubmit={formik.handleSubmit}>
           <CustomInput
             type="text"
-            name="email"
+            name="email" 
             label="Email Address"
             id="email"
             onCh={formik.handleChange("email")}
@@ -42,14 +54,14 @@ const Login = () => {
           <div className="mb-3 text-end">
             <Link to="forgot-password">Forgot Password?</Link>
           </div>
-          <Link
-            to="/admin"
+          <button
+            
             className="text-center text-decoration-none border-0 px-3 py-2 text-white fw-bold w-100 fs-5"
             style={{ background: "#ffd333" }}
             type="submit"
           >
             Login
-          </Link>
+          </button>
         </form>
       </div>
     </div>
