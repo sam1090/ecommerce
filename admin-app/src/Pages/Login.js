@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import Password from "antd/es/input/Password";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../features/auth/authSlice";
 
 const Login = () => {
+  const dispatch = useDispatch();
   let schema = yup.object().shape({
     email: yup
       .string()
@@ -22,6 +25,7 @@ const Login = () => {
     validationSchema: schema,
 
     onSubmit: (values) => {
+      dispatch(login(values))
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -44,9 +48,9 @@ const Login = () => {
             val={formik.values.email}
           />
           <div className="error">
-          {formik.touched.email && formik.errors.email ? (
-            <div className="">{formik.errors.email}</div>
-          ) : null}
+            {formik.touched.email && formik.errors.email ? (
+              <div className="">{formik.errors.email}</div>
+            ) : null}
           </div>
           <CustomInput
             type="password"
@@ -57,9 +61,9 @@ const Login = () => {
             val={formik.values.password}
           />
           <div className="error">
-          {formik.touched.password && formik.errors.password ? (
-            <div className="">{formik.errors.password}</div>
-          ) : null}
+            {formik.touched.password && formik.errors.password ? (
+              <div className="">{formik.errors.password}</div>
+            ) : null}
           </div>
           <div className="mb-3 text-end">
             <Link to="forgot-password">Forgot Password?</Link>

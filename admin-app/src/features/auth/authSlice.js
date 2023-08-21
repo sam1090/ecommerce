@@ -18,7 +18,7 @@ const initialState = {
   message: "",
 };
 
-const login = createAsyncThunk('auth/admin-login', async(user, thunkAPI) =>{
+export const login = createAsyncThunk('auth/admin-login', async(user, thunkAPI) =>{
   try {
     return await authService.login(user);
   } catch (error) {
