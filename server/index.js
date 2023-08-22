@@ -19,9 +19,9 @@ const PORT = process.env.PORT || 4000;
 
 // console.log(process.env.MONGO_URL);
 dbConnect();
+app.use(cors());
 
 app.use(morgan());
-app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
