@@ -2,7 +2,7 @@ import axios from "axios";
 import { base_url } from "../../utils/baseUrl";
 
 const getUsers = async () => {
-  const response = await axios.post(`${base_url}users/all-users`);
+  const response = await axios.get(`${base_url}users/all-users`);
 
   console.log(response.data);
 
