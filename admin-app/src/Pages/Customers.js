@@ -11,6 +11,8 @@ const columns = [
   {
     title: "Name",
     dataIndex: "name",
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.name.length - b.name.length,
   },
   {
     title: "Email",
@@ -32,13 +34,13 @@ const Customers = () => {
 
   const data1 = [];
 
-  for (let i = 0; i < customerstate.length; i++) {
-    if(customerstate[i].role !== 'admin'){
+  for (let i = 0; i < customerstate.size; i++) {
+    if(customerstate.getUsers[i].role !== 'admin'){
       data1.push({
         key: i + 1,
-        name: customerstate[i].firstname + " " + customerstate[i].lastname,
-        email: customerstate[i].email,
-        mobile: customerstate[i].mobile,
+        name: customerstate.getUsers[i].firstname + " " + customerstate.getUsers[i].lastname,
+        email: customerstate.getUsers[i].email,
+        mobile: customerstate.getUsers[i].mobile,
       });
     }
   }
