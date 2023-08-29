@@ -74,50 +74,6 @@ const ProductList = () => {
     });
   }
 
-  for (let i = 0; i < productState.size; i++) {
-    data1.push({
-      key: i + 1,
-
-      title: productState.products[i].title,
-      brand: productState.products[i].brand,
-      category: productState.products[i].category,
-      color: productState.products[i].color,
-      price: ` ${productState.products[i].price}`,
-      action: (
-        <>
-          <Link to='/' className="fs-5">
-            <BiEdit />
-          </Link>
-          <Link to= '/' className="ms-3 fs-5 text-danger">
-            <AiFillDelete />
-          </Link>
-        </>
-      ),
-    });
-  }
-
-  for (let i = 0; i < productState.size; i++) {
-    data1.push({
-      key: i + 1,
-
-      title: productState.products[i].title,
-      brand: productState.products[i].brand,
-      category: productState.products[i].category,
-      color: productState.products[i].color,
-      price: ` ${productState.products[i].price}`,
-      action: (
-        <>
-          <Link to='/' className="fs-5">
-            <BiEdit />
-          </Link>
-          <Link to= '/' className="ms-3 fs-5 text-danger">
-            <AiFillDelete />
-          </Link>
-        </>
-      ),
-    });
-  }
-
 
   return (
     <div>
