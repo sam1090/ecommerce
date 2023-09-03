@@ -13,10 +13,13 @@ const columns = [
   {
     title: "Name",
     dataIndex: "name"
+    ,
+    sorter: (a, b) => a.name.length - b.name.length
   }, 
   {
     title: "Category",
-    dataIndex: "category"
+    dataIndex: "category",
+    sorter: (a, b) => a.category.length - b.category.length
   }, 
   {
     title: "Action",
