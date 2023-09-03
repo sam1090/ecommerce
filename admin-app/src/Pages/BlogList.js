@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import { Table } from 'antd';
-
+import { useDispatch, useSelector } from "react-redux";
+import { getBlogs } from "../features/blog/blogSlice";
+import Link from "antd/es/typography/Link";
+import { BiEdit } from "react-icons/bi";
+import { AiFillDelete } from "react-icons/ai";
 const columns = [
   {
     title : "Sno",
@@ -11,27 +15,42 @@ const columns = [
     dataIndex: "name"
   }, 
   {
-    title: "Product",
-    dataIndex: "product"
+    title: "Category",
+    dataIndex: "category"
   }, 
   {
-    title: "Status",
-    dataIndex: "status"
+    title: "Action",
+    dataIndex: "action"
   }, 
 ];
 
-const data1 = [];
-
-for(let i = 0 ; i< 46 ; i++){
-  data1.push({
-    key: i , 
-    name: `Edward King ${i}`,
-    product: 32,
-    status: `London, Park Lane no. ${i}`,
-  });
-}
 
 const BlogList = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBlogs());
+  }, []);
+  const blogState = useSelector((state) => state.blog.blogs);
+
+  const data1 = [];
+
+  for (let i = 0; i < blogState.size; i++) {
+    data1.push({
+      key: i + 1,
+      name: blogState.getAllBlogs[i].title,
+      category:blogState.getAllBlogs[i].category,
+      action: (
+        <>
+          <Link to="/" className="fs-5">
+            <BiEdit />
+          </Link>
+          <Link to="/" className="ms-3 fs-5 text-danger">
+            <AiFillDelete />
+          </Link>
+        </>
+      ),
+    });
+  }
   return (
     <div>
     <h3 className="mb-4 title">
