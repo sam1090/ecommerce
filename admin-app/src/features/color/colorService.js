@@ -1,16 +1,16 @@
-import axios from "axios";
-import { base_url } from "../../utils/baseUrl";
+// import axios from "axios";
+// import { base_url } from "../../utils/baseUrl";
 
-const getUsers = async () => {
-  const response = await axios.get(`${base_url}users/all-users`);
+// const getUsers = async () => {
+//   const response = await axios.get(`${base_url}users/all-users`);
 
-  console.log(response.data);
+//   console.log(response.data);
 
-  return response.data;
-};
+//   return response.data;
+// };
 
-const customerService = {
-  getUsers,
-};
+// const customerService = {
+//   getUsers,
+// };
 
-export default customerService;
+// export default customerService;

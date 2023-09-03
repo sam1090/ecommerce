@@ -3,7 +3,7 @@ import brandService from "./brandService";
 
 
 export const getBrands = createAsyncThunk(
-  "brand/get-brands",
+  "",
   async (thunkAPI) => {
     try {
       return await brandService.getBrands();
@@ -34,7 +34,7 @@ export const brandSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.products= action.payload;
+        state.brands= action.payload;
       })
       .addCase(getBrands.rejected, (state, action) => {
         state.isLoading = false;
