@@ -29,7 +29,9 @@ exports.getAllCategory = asyncHandler(async(req,res)=>{
 
   try {
     const getAllCategory = await Category.find();
-    res.json(getAllCategory);
+    res.json({
+      getAllCategory,
+    });
     
   } catch (error) {
     throw new Error(error);

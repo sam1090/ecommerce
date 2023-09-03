@@ -14,7 +14,7 @@ export const getCategories = createAsyncThunk(
 );
 
 const initialState = {
-  getCategories: [],
+  getCategory: [],
   isError: false,
   isLoading: false,
   isSuccess: false,
@@ -22,7 +22,7 @@ const initialState = {
 };
 
 export const pCategorySlice = createSlice({
-  name: "productCategory",
+  name: "getCategory",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -34,7 +34,7 @@ export const pCategorySlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.getCategories = action.payload;
+        state.getCategory = action.payload;
       })
       .addCase(getCategories.rejected, (state, action) => {
         state.isLoading = false;
