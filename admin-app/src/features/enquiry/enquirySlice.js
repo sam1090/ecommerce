@@ -1,48 +1,48 @@
-// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// import customerService from "./customerService";
+import enquiryService from "./enquiryService";
 
-// export const getUsers = createAsyncThunk(
-//   "customer/get-customers",
-//   async (thunkAPI) => {
-//     try {
-//       return await customerService.getUsers();
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error);
-//     }
-//   }
-// );
+export const getEnquiry = createAsyncThunk(
+  "customer/get-customers",
+  async (thunkAPI) => {
+    try {
+      return await enquiryService.getEnquiry();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
 
-// const initialState = {
-//   customers: [],
-//   isError: false,
-//   isLoading: false,
-//   isSuccess: false,
-//   message: "",
-// };
+const initialState = {
+  enquiry: [],
+  isError: false,
+  isLoading: false,
+  isSuccess: false,
+  message: "",
+};
 
-// export const customerSlice = createSlice({
-//   name: "users",
-//   initialState,
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(getUsers.pending, (state) => {
-//         state.isLoading = true;
-//       })
-//       .addCase(getUsers.fulfilled, (state, action) => {
-//         state.isLoading = false;
-//         state.isError = false;
-//         state.isSuccess = true;
-//         state.customers = action.payload;
-//       })
-//       .addCase(getUsers.rejected, (state, action) => {
-//         state.isLoading = false;
-//         state.isError = true;
-//         state.isSuccess = false;
-//         state.message = action.error;
-//       });
-//   },
-// });
+export const enquirySlice = createSlice({
+  name: "enquiry",
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getEnquiry.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getEnquiry.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.enquiry = action.payload;
+      })
+      .addCase(getEnquiry.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+      });
+  },
+});
 
-// export default customerSlice.reducer;
+export default enquirySlice.reducer;

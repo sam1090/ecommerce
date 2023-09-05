@@ -1,48 +1,48 @@
-// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// import customerService from "./customerService";
+import colorService from "./colorService";
 
-// export const getUsers = createAsyncThunk(
-//   "customer/get-customers",
-//   async (thunkAPI) => {
-//     try {
-//       return await customerService.getUsers();
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error);
-//     }
-//   }
-// );
+export const getColors = createAsyncThunk(
+  "colors/get-colors",
+  async (thunkAPI) => {
+    try {
+      return await colorService.getColors();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
 
-// const initialState = {
-//   customers: [],
-//   isError: false,
-//   isLoading: false,
-//   isSuccess: false,
-//   message: "",
-// };
+const initialState = {
+  color: [],
+  isError: false,
+  isLoading: false,
+  isSuccess: false,
+  message: "",
+};
 
-// export const customerSlice = createSlice({
-//   name: "users",
-//   initialState,
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(getUsers.pending, (state) => {
-//         state.isLoading = true;
-//       })
-//       .addCase(getUsers.fulfilled, (state, action) => {
-//         state.isLoading = false;
-//         state.isError = false;
-//         state.isSuccess = true;
-//         state.customers = action.payload;
-//       })
-//       .addCase(getUsers.rejected, (state, action) => {
-//         state.isLoading = false;
-//         state.isError = true;
-//         state.isSuccess = false;
-//         state.message = action.error;
-//       });
-//   },
-// });
+export const colorSlice = createSlice({
+  name: "color",
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getColors.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getColors.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.color = action.payload;
+      })
+      .addCase(getColors.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+      });
+  },
+});
 
-// export default customerSlice.reducer;
+export default colorSlice.reducer;
