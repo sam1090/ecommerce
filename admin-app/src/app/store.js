@@ -8,6 +8,7 @@ import pCategoryReducer from "../features/pcategory/pcategorySlice";
 import blogCatRouter from "../features/bcategory/bcategorySlice";
 import colorRouter from "../features/color/colorSlice";
 import enquiryRouter from "../features/enquiry/enquirySlice";
+import orderRouter from "../features/order/orderSlice";
 
 export const store = configureStore({
   reducer: {
@@ -20,5 +21,6 @@ export const store = configureStore({
     blogCategory: blogCatRouter,
     color : colorRouter,
     enquiry : enquiryRouter,
+    order: orderRouter,
   },
 });
