@@ -21,6 +21,30 @@ const initialState = {
   message: "",
 };
 
+ initialState = {
+  enquiry: [],
+  isError: false,
+  isLoading: false,
+  isSuccess: false,
+  message: "",
+};
+
+ initialState = {
+  enquiry: [],
+  isError: false,
+  isLoading: false,
+  isSuccess: false,
+  message: "",
+};
+
+ initialState = {
+  enquiry: [],
+  isError: false,
+  isLoading: false,
+  isSuccess: false,
+  message: "",
+};
+
 export const enquirySlice = createSlice({
   name: "enquiry",
   initialState,
