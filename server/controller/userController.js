@@ -485,11 +485,22 @@ exports.createOrder = asyncHandler(async(req,res)=>{
 });
 
 exports.getAllOrders = asyncHandler(async(req, res)=>{
+ 
+
+  try {
+    const allUserOrders = await Order.find().populate("products.product").populate("orderby").exec();
+    res.json(allUserOrders);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+exports.getOrders = asyncHandler(async(req, res)=>{
   const { _id} = req.user;
   validateMoongooseId(_id);
 
   try {
-    const userOrders = await Order.findOne({orderby:_id});
+    const userOrders = await Order.findOne({orderby:_id}).populate("products.product").populate("orderby").exec();
     res.json(userOrders);
   } catch (error) {
     throw new Error(error);

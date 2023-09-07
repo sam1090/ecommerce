@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Table } from 'antd';
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders } from "../features/order/orderSlice";
+import { getOrders } from "../features/auth/authSlice";
 import Link from "antd/es/typography/Link";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
@@ -18,10 +18,11 @@ const columns = [
   {
     title: "Product",
     dataIndex: "product"
-  }, 
+  },
+ 
   {
-    title: "Status",
-    dataIndex: "status"
+    title: "Action",
+    dataIndex: "action"
   }, 
 ];
 
@@ -30,17 +31,17 @@ const Orders = () => {
   useEffect(() => {
     dispatch(getOrders());
   }, []);
-  const orderState = useSelector((state) => state.order.order);
+  const orderState = useSelector((state) => state.auth.orders);
 
   const data1 = [];
 
 for(let i = 0 ; i< orderState.length; i++){
   data1.push({
     key: i + 1, 
-    name:orderState[i].name ,
-    email:orderState[i].email ,
-    comment:orderState[i].comment ,
-    date:orderState[i].createdAt ,
+    name:orderState[i].orderby.firstname,
+    product: orderState[i].products.map((i) => {
+      return i.product.title;
+    }),
     action: (
       <>
         <Link to="/" className="fs-5">
