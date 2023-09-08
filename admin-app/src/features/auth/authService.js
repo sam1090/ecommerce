@@ -3,12 +3,22 @@ import { base_url } from "../../utils/baseUrl";
 const getTokenFromLocalStorage = localStorage.getItem("user")
 ? JSON.parse(localStorage.getItem("user")) : null;
 
-const config = {
-  headers: {
-    Authorization : `Bearer ${getTokenFromLocalStorage.token}`,
-    Accept : "application/json",
-  }
+
+let config;
+
+if (getTokenFromLocalStorage.token !== null) {
+  config = {
+    headers: {
+      Authorization: `Bearer ${getTokenFromLocalStorage.token}`,
+      Accept: "application/json",
+    },
+  };
+} else {
+  config = null;
 }
+
+
+
 
 
 const login = async(userData) => {
