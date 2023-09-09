@@ -32,10 +32,10 @@ const CategoryList = () => {
 
   const data1 = [];
 
-for(let i = 0 ; i< categoryState.length; i++){
+for(let i = 0 ; i< categoryState.getAllCategory.length; i++){
   data1.push({
     key: i + 1, 
-    name:categoryState[i].title ,
+    name:categoryState.getAllCategory[i].title ,
     action: (
       <>
         <Link to="/" className="fs-5">

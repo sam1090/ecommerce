@@ -54,6 +54,7 @@ const ProductList = () => {
 
   for (let i = 0; i < productState.size; i++) {
     data1.push({
+      
       key: i + 1,
 
       title: productState.products[i].title,
