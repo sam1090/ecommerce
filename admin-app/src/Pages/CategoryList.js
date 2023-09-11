@@ -48,7 +48,7 @@ for(let i = 0 ; i< categoryState.getAllCategory.length; i++){
     ),
     
   });
-}
+} 
 
   return (
     <div>
