@@ -4,51 +4,26 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { useDispatch } from "react-redux";
+import { login } from "../features/auth/authSlice";
+
 
 let schema = yup.object().shape({
-  email: yup
+  title: yup
     .string()
-    .email("Email should be valid")
-    .required("Email is required"),
-  password: yup.string().required("Password is Required"),
+    .required("Title is required"),
+    description: yup
+    .string()
+    .required("Description is required")
 });
 
-
-const AddProduct = () => {
-  
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: schema,
-
-    onSubmit: (values) => {
-      dispatch(login(values));
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-  const [desc, setDesc] = useState();
-  const handleDesc = (e) => {
-    setDesc(e);
-  };
-
-
-  let schema = yup.object().shape({
-    email: yup
-      .string()
-      .email("Email should be valid")
-      .required("Email is required"),
-    password: yup.string().required("Password is Required"),
-  });
-  
-  
   const AddProduct = () => {
-    
+    const dispatch = useDispatch();
+
     const formik = useFormik({
       initialValues: {
-        email: "",
-        password: "",
+        title: "",
+        description: "",
       },
       validationSchema: schema,
   
@@ -67,8 +42,9 @@ const AddProduct = () => {
     <div>
       <h3 className="mb-4 title">Add Product</h3>
       <div>
-        <form action="">
-          <CustomInput type="text" label="Enter Product Title" />
+        <form onSubmit={formik.handleSubmit}>
+          <CustomInput type="text" label="Enter Product Title" name='title' onchng = {formik.handleChange("title")} onBlr = {formik.handleblur("title")} />
+          <div className="mb-3">
           <ReactQuill
             theme="snow"
             value={desc}
@@ -76,6 +52,8 @@ const AddProduct = () => {
               handleDesc(evt);
             }}
           />
+          </div>
+        
           <CustomInput type="number" label="Enter Product Price" />
           <select name="" className="form-control py-3 mb-3 " id="">
             <option value="">Select Category</option>
