@@ -74,6 +74,105 @@ let schema = yup.object().shape({
           </button>
         </form>
       </div>
+      <div>
+        <form onSubmit={formik.handleSubmit}>
+          <CustomInput type="text" label="Enter Product Title" name='title' onchng = {formik.handleChange("title")} onBlr = {formik.handleblur("title")} />
+          <div className="mb-3">
+          <ReactQuill
+            theme="snow"
+            value={desc}
+            onChange={(evt) => {
+              handleDesc(evt);
+            }}
+          />
+          </div>
+        
+          <CustomInput type="number" label="Enter Product Price" />
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Category</option>
+          </select>
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Color</option>
+          </select>{" "}
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Brand</option>
+          </select>
+          <CustomInput type="number" label="Enter Product Price" />
+          
+          <button
+            className="btn btn-success border-0 rounded-3 my-5"
+            type="submit"
+          >
+            Add Product
+          </button>
+        </form>
+      </div>
+      <div>
+        <form onSubmit={formik.handleSubmit}>
+          <CustomInput type="text" label="Enter Product Title" name='title' onchng = {formik.handleChange("title")} onBlr = {formik.handleblur("title")} />
+          <div className="mb-3">
+          <ReactQuill
+            theme="snow"
+            value={desc}
+            onChange={(evt) => {
+              handleDesc(evt);
+            }}
+          />
+          </div>
+        
+          <CustomInput type="number" label="Enter Product Price" />
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Category</option>
+          </select>
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Color</option>
+          </select>{" "}
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Brand</option>
+          </select>
+          <CustomInput type="number" label="Enter Product Price" />
+          
+          <button
+            className="btn btn-success border-0 rounded-3 my-5"
+            type="submit"
+          >
+            Add Product
+          </button>
+        </form>
+      </div>
+      <div>
+        <form onSubmit={formik.handleSubmit}>
+          <CustomInput type="text" label="Enter Product Title" name='title' onchng = {formik.handleChange("title")} onBlr = {formik.handleblur("title")} />
+          <div className="mb-3">
+          <ReactQuill
+            theme="snow"
+            value={desc}
+            onChange={(evt) => {
+              handleDesc(evt);
+            }}
+          />
+          </div>
+        
+          <CustomInput type="number" label="Enter Product Price" />
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Category</option>
+          </select>
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Color</option>
+          </select>{" "}
+          <select name="" className="form-control py-3 mb-3 " id="">
+            <option value="">Select Brand</option>
+          </select>
+          <CustomInput type="number" label="Enter Product Price" />
+          
+          <button
+            className="btn btn-success border-0 rounded-3 my-5"
+            type="submit"
+          >
+            Add Product
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
