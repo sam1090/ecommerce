@@ -6,6 +6,8 @@ const getTokenFromLocalStorage = localStorage.getItem("user")
 
 let config;
 
+console.log(getTokenFromLocalStorage.token);
+
 if (getTokenFromLocalStorage.token !== null) {
   config = {
     headers: {
