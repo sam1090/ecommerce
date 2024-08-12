@@ -1,0 +1,198 @@
+[
+{
+  "_id": {
+    "$oid": "6693feed0c557a156331bbfe"
+  },
+  "title": "ipad 10",
+  "slug": "ipad 10",
+  "description": "it's an ipad",
+  "price": 90000,
+  "category": "electronics",
+  "brand": "Apple",
+  "quantity": 1,
+  "sold": 0,
+  "images": [
+    {
+      "public_id": "iphone",
+      "url": "../images/ipad11.jpeg"
+    },
+    {
+      "public_id": "iphone",
+      "url": "../images/ipad21.jpeg"
+    }
+  ],
+  "color": "red",
+  "ratings": [
+    {
+      "star": 5,
+      "comment": "Brilliant!"
+    }
+  ],
+  "tags": "featured"
+}
+,
+    
+    {	
+  "_id": {
+    "$oid": "6693feed0c557a156331bbff"
+  },
+  "title": "Ikigai",
+  "slug": "ikigai",
+  "description": "Having a strong sense of ikigai—where what you love, what you’re good at, what you can get paid for, and what the world needs all overlap—means that each day is infused with meaning. It’s the reason we get up in the morning. It’s also the reason many Japanese never really retire (in fact there’s no word in Japanese that means retire in the sense it does in English): They remain active and work at what they enjoy, because they’ve found a real purpose in life—the happiness of always being busy.",
+  "price": 300,
+  "category": "books",
+  "brand": "Toyoshami production",
+  "quantity": 1,
+  "sold": 550,
+  "images": [
+    {
+      "public_id": "book",
+      "url": "../images/book11.png"
+    },
+    {
+      "public_id": "book",
+      "url": "../images/book2.png"
+    }
+  ],
+  "color": "blue",
+  "ratings": [
+    {
+      "star": 4.5,
+      "comment": "Inspiring!"
+    },
+    {
+        "star" : 5.0,
+        "comment": "Life changing!"
+    }
+  ],
+  "tags": "featured"
+},
+{
+    "title": "Puma Panther",
+    "slug": "Puma Panther",
+    "description": "The Puma Panther features a lightweight, breathable design with iconic air cushioning for comfort and style. Perfect for running and casual wear, these shoes offer superior performance and a modern look.",
+    "price": 7000,
+    "category": "footwear",
+    "brand": "Puma",
+    "quantity": 10,
+    "sold": 5,
+    "images": [
+        {
+            "public_id": "shoes",
+            "url": "../images/shoe1.jpeg"
+        },
+        {
+            "public_id": "shoes",
+            "url": "../images/shoe2.jpeg"
+        }
+    ],
+    "color": "black",
+    "ratings": [
+        {
+            "star": 4.7,
+            "comment": "Very comfortable!"
+        }
+    ],
+    "tags": "featured"
+},
+{
+    "title": "Modern Sofa",
+    "slug": "modern-sofa",
+    "description": "A contemporary sofa with clean lines and plush cushions, offering both comfort and style to any living space. Upholstered in high-quality fabric with a durable frame.",
+    "price": 40000,
+    "category": "furniture",
+    "brand": "Ikea",
+    "quantity": 5,
+    "sold": 800,
+    "images": [
+        {
+            "public_id": "sofa",
+            "url": "../images/sofa1.jpg"
+        },
+        {
+            "public_id": "sofa",
+            "url": "../images/sofa2.jpeg"
+        }
+    ],
+    "color": "grey",
+    "ratings": [
+        {
+            "star": 4.3,
+            "comment": "Stylish and comfortable!"
+        },
+        {
+            "star": 3.3,
+            "comment": "Too Expensive!"
+        },
+        {
+            "star": 4.0,
+            "comment": "Durable"
+        }
+    ],
+    "tags": "featured"
+},
+{
+    "title": "Omega Watch",
+    "slug": "omega-watch",
+    "description": "The omega-Seamaster watch combines precision and elegance, featuring a classic design and advanced timekeeping technology. Perfect for formal and casual occasions.",
+    "price": 7000,
+    "category": "accessories",
+    "brand": "Omega-seamaster",
+    "quantity": 1,
+    "sold": 317,
+    "images": [
+        {
+            "public_id": "watch",
+            "url": "../images/watch1.jpeg"
+        },
+        {
+            "public_id": "watch",
+            "url": "../images/watch2.jpeg"
+        }
+    ],
+    "color": "platinum",
+    "ratings": [
+        {
+            "star": 5.0,
+            "comment": "A timeless piece!"
+        }
+    ],
+    "tags": "special"
+},
+{
+    "title": "Samsung Galaxy S23 fe",
+    "slug": "samsung-galaxy-s23-fe",
+    "description": "The Samsung Galaxy S23 fe features a sleek design, powerful performance, and advanced camera capabilities, making it a top choice for smartphone enthusiasts.",
+    "price": 70000,
+    "category": "electronics",
+    "brand": "Samsung",
+    "quantity": 20,
+    "sold": 10,
+    "images": [
+        {
+            "public_id": "phone",
+            "url": "../images/phone1.jpeg"
+        },
+        {
+            "public_id": "phone",
+            "url": "../images/phone2.jpeg"
+        }
+    ],
+    "color": "phantom black",
+    "ratings": [
+        {
+            "star": 4.8,
+            "comment": "Excellent phone with great features!"
+        },
+        {
+            
+                "star": 5.0,
+                "comment": "Best in this price range"
+            
+        }
+    ],
+    "tags": "featured"
+}
+]
+
+
