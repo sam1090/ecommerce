@@ -1,0 +1,50 @@
+
+:root{
+  --color-212529: #212529;
+  --color-ffd333: #ffd333;
+  --color-471d24: #471d24;
+  --color-e52e2e: #e52e2e;
+  --color-828599: #828599;
+  --color-ed2464d: #ed464d;
+  --color-c3d4da: #c3d4da;
+
+
+}
+
+.green{
+  color: green;
+  font-size: 14px;
+  font-family: Roboto !important;
+}
+
+.red{
+  color: red;
+  font-size: 14px;
+  font-family: Roboto !important;
+}
+
+.quill{
+  background-color: white;
+}
+
+.form-control{
+  box-shadow: none;
+  border-color:var(--color-c3d4da) ;
+}
+
+.title{
+  font: 28px;
+  font-family: Roboto !important;
+}
+
+.sub-title{
+  font: 24px;
+  font-family: Roboto !important;
+}
+
+.desc{
+  font: 14px;
+  font-family: Roboto !important;
+  color: var(--color-828599);
+}
+
