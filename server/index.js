@@ -29,8 +29,7 @@ app.use(morgan('dev'));
 app.use(
   cors({
     orgin: [
-      'https://Bazaar.vercel.app/',
-      'https://Bazaar-admin.vercel.app/',
+      'https://dukaan-24-7.onrender.com/',
       'https://localhost:3000',
     ],
     credentials: true,
