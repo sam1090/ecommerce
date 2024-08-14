@@ -10,7 +10,7 @@ import cors from 'cors';
 import authRouter from './routes/authRoute.js';
 import productRouter from './routes/productRoute.js';
 import blogRouter from './routes/blogRoute.js';
-import categoryRouter from './routes/prodcategoryRoute.js';
+import categoryRouter from './routes/prodCategoryRoute.js';
 import blogCategoryRouter from './routes/blogCatRoute.js';
 import brandRouter from './routes/brandRoute.js';
 import colorRouter from './routes/colorRoute.js';
