@@ -122,35 +122,35 @@ const Footer = () => {
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                 <a
                   className="text-white btn btn-floating m-1"
-                  href="https://www.linkedin.com/in/urvashi-shukla/"
+                  href="https://www.linkedin.com/in/sam9010/"
                 >
                   <BsLinkedin className="fs-4" />
                 </a>
 
                 <a
                   className="btn btn-floating m-1 text-white"
-                  href="https://github.com/urvashi1210"
+                  href="https://github.com/sam1090"
                 >
                   <BsGithub className="fs-4" />
                 </a>
 
                 <a
                   className="btn btn-floating m-1 text-white"
-                  href="https://x.com/Urvashi_0107?t=0PJ5gTCpG8ds09s0WuSfFw&s=09"
+                  href="https://x.com/usam9010"
                 >
                   <BsTwitter className="fs-4" />
                 </a>
 
                 <a
                   className="btn btn-floating m-1 text-white"
-                  href="https://leetcode.com/u/urvashi1210/"
+                  href="https://leetcode.com/u/sam9010/"
                 >
                   <SiLeetcode className="fs-4" />
                 </a>
 
                 <a
                   className="btn btn-floating m-1 text-white"
-                  href="https://codeforces.com/profile/urvashi_1210"
+                  href="https://codeforces.com/profile/sam9010"
                 >
                   <FaCode className="fs-4" />
                 </a>
