@@ -44,6 +44,7 @@ export const addProdToCart = createAsyncThunk(
     try {
       return await authService.addToCart(cartData);
     } catch (error) {
+      console.log('Error from backend:', error.response?.data || error.message);
       return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
     }
   }
