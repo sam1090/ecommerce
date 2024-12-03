@@ -48,8 +48,8 @@ export const addProdToCart = createAsyncThunk(
       const errorMessage = error.response?.data || error.message;
 
       // If the backend sends "Please choose color", override it with a custom message
-      if (errorMessage === 'Please choose color') {
-        return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
+      if (errorMessage === 'Ensure you are logged in & have chosen color') {
+        return thunkAPI.rejectWithValue("Ensure you are logged in & have chosen color");
       }
 
       return thunkAPI.rejectWithValue(errorMessage);

@@ -60,7 +60,7 @@ const SingleProduct = () => {
 
   const uploadCart = () => {
     if (color === null) {
-      toast.error('Please choose color');
+      toast.error('Ensure you are logged in & have chosen color');
       return false;
     } else {
       dispatch(
