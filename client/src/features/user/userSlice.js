@@ -38,17 +38,25 @@ export const getUserProductWishlist = createAsyncThunk(
 export const addProdToCart = createAsyncThunk(
   'user/cart/add',
   async (cartData, thunkAPI) => {
-    if (cartData.productId === undefined) {
+    if (cartData.productId === undefined || !cartData.color) {
       return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
     }
+
     try {
       return await authService.addToCart(cartData);
     } catch (error) {
-      console.log('Error from backend:', error.response?.data || error.message);
-      return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
+      const errorMessage = error.response?.data || error.message;
+
+      // If the backend sends "Please choose color", override it with a custom message
+      if (errorMessage === 'Please choose color') {
+        return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
+      }
+
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );
+
 
 export const getUserCart = createAsyncThunk(
   'user/cart/get',
