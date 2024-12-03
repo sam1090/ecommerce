@@ -39,12 +39,12 @@ export const addProdToCart = createAsyncThunk(
   'user/cart/add',
   async (cartData, thunkAPI) => {
     if (cartData.productId === undefined) {
-      return false;
+      return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
     }
     try {
       return await authService.addToCart(cartData);
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue("Ensure you're logged in & have chosen color");
     }
   }
 );
